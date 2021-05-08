@@ -1,4 +1,4 @@
-import './App.css';
+    import './App.css';
 import React , {useState, useEffect} from 'react';
 import Nav from './Nav';
 import Bio from './Bio';
@@ -7,6 +7,7 @@ import Carrusel from './Carrusel';
 import Noticias from './Noticias';
 import Contacto from './Contacto';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 
 function App() {
   return (

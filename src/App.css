@@ -3,11 +3,12 @@
 }
 
 nav {
+  margin-top: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  background:white;
+  background-color: white!important;
   color:black;
 }
 
@@ -19,9 +20,7 @@ nav {
   list-style: none;
   font-family: monospace;
   font-stretch: extra-expanded;
-
 }
-
 
 .carousel-control-next, .carousel-control-prev{
   -webkit-animation: bgcolorchange 10s infinite; /* Chrome, Safari, Opera */ 
@@ -51,4 +50,28 @@ nav {
       80%  {background: white;}
       100% {background: lightgray;}
  }
+/*Pinturas/*/
+ .pinturas{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+ }
 
+ .image-card{
+
+ }
+
+ .image{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    cursor: pointer;
+ }
+
+/*Carrusel*/
+.carrusel{
+    margin-top: 30px;
+}

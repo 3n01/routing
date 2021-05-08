@@ -1,7 +1,9 @@
 import React from 'react';
 import {Link } from 'react-router-dom';
+import { useTranslation} from 'react-i18next';
 
 function Nav(){
+    const [t, i18n] = useTranslation("global");
 
     const navStyle = {
         color : 'gray',
@@ -18,7 +20,7 @@ function Nav(){
     }
 
     return(
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
           <Link  style={mainNavStyle} to="/">EFRÉN GARCÍA IGLESIAS</Link>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,14 +35,18 @@ function Nav(){
                 <Link  style={navStyle} to="/bio"><li>BIO</li></Link>
               </li>
               <li class="nav-item">
-                <Link  style={navStyle} to="/pinturas"><li>PINTURAS</li></Link>
+                <Link  style={navStyle} to="/pinturas"><li>{t("nav.pinturas")}</li></Link>
               </li>
                 <li class="nav-item">
-                    <Link  style={navStyle} to="/noticias"><li>NOTICIAS</li></Link>
+                    <Link  style={navStyle} to="/noticias"><li>{t("nav.noticias")}</li></Link>
                 </li>
               <li class="nav-item">
-                   <Link  style={navStyle} to="/contacto"><li>CONTACTO</li></Link>
+                   <Link  style={navStyle} to="/contacto"><li>{t("nav.contacto")}</li></Link>
               </li>
+               <li class="nav-item">
+                     <button onClick={ () => i18n.changeLanguage("es")}>ES</button>
+                     <button onClick={ () => i18n.changeLanguage("en")}>EN</button>
+                </li>
             </ul>
           </div>
         </div>

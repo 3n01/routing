@@ -23,7 +23,7 @@ function Carrusel() {
   }
 
   return (
-    <div className="Carrusel">
+    <div className="carrusel">
       <Carousel>
         {items.map(item => {
           return <Carousel.Item key={item._id}>
