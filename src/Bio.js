@@ -1,10 +1,14 @@
 import './App.css';
 import React from 'react';
+import { useTranslation} from 'react-i18next';
+
 
 function Bio() {
+  const [t, i18n] = useTranslation("global");
+
   return (
-    <div className="Bio">
-        <h1>This is the bio</h1>
+    <div className="bio">
+        {t("bio.descripcion")}
     </div>
   );
 }

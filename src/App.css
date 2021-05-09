@@ -75,3 +75,30 @@ nav {
 .carrusel{
     margin-top: 30px;
 }
+
+/*Nav*/
+
+/*.esFlag{
+    background-image: url("Spain-icon.png");
+    width: 10px;
+    height: 10px;
+}
+
+
+.esFlag {
+    display: inline-block;
+    background-size: 10px!important;
+    width: 10px;
+    height: 10px;
+    font-size: 0.1em;
+    padding: 5px;
+}
+
+.esFlag::before {
+    content: url(Spain-icon-35px.png);
+    padding: 5px;
+    background-size: 10px!important;
+    width: 10px;
+    height: 10px;
+    font-size: 0.1em;
+}*/

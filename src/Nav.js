@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link } from 'react-router-dom';
 import { useTranslation} from 'react-i18next';
+import './App.css';
+import { Dropdown } from 'react-bootstrap';
 
 function Nav(){
     const [t, i18n] = useTranslation("global");
@@ -9,7 +11,8 @@ function Nav(){
         color : 'gray',
         fontWeight : 'bold',
         fontSize: '15px',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        borderBottom: '1px solid gray'
     }
 
     const mainNavStyle = {
@@ -44,22 +47,24 @@ function Nav(){
                    <Link  style={navStyle} to="/contacto"><li>{t("nav.contacto")}</li></Link>
               </li>
                <li class="nav-item">
-                     <button onClick={ () => i18n.changeLanguage("es")}>ES</button>
-                     <button onClick={ () => i18n.changeLanguage("en")}>EN</button>
+                    <Dropdown>
+                      <Dropdown.Toggle variant="" id="dropdown-basic">
+                        {t("nav.idioma")}
+                      </Dropdown.Toggle>
+
+                      <Dropdown.Menu>
+                        <Dropdown.Item onClick={ () => i18n.changeLanguage("es")}>Español</Dropdown.Item>
+                        <Dropdown.Item onClick={ () => i18n.changeLanguage("en")}>English</Dropdown.Item>
+                        <Dropdown.Item onClick={ () => i18n.changeLanguage("fr")}>Français</Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
+
+
                 </li>
             </ul>
           </div>
         </div>
       </nav>
-/*        <nav>
-            <ul className="nav-links">
-                <Link  style={navStyle} to="/"><li>EFRÉN GARCÍA IGLESIAS</li></Link>
-                <Link  style={navStyle} to="/bio"><li>BIO</li></Link>
-                <Link  style={navStyle} to="/pinturas"><li>PINTURAS</li></Link>
-                <Link  style={navStyle} to="/noticias"><li>NOTICIAS</li></Link>
-                <Link  style={navStyle} to="/contacto"><li>CONTACTO</li></Link>
-            </ul>
-        </nav>*/
     )
 }
 
