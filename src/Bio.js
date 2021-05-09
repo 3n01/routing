@@ -8,7 +8,12 @@ function Bio() {
 
   return (
     <div className="bio">
+       <div className="descripcion">
+       {t("bio.descripcion")}
+       </div>
+       <div className="descripcion">
         {t("bio.descripcion")}
+        </div>
     </div>
   );
 }

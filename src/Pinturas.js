@@ -10,7 +10,7 @@ function Pinturas() {
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-     const data = await fetch('http://localhost:3032/api/images', {
+     const data = await fetch('http://localhost:3032/api/images/2', {
       method: 'GET',
       mode: 'cors'
     });
@@ -24,7 +24,7 @@ function Pinturas() {
   return (
   <SRLWrapper>
     <div className="pinturas">
-        { items.map( item => {
+        { items.sort((a,b) => a.sort - b.sort).map( item => {
                 let alt =`${item.name}: ${item.description} ${item.m1}x${item.m2} ${item.year}`;
                 return (<div key={item._id} className="image-card">
                     <img className="image" src={item.url} alt={alt}></img>

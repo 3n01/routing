@@ -12,7 +12,7 @@ function Carrusel() {
   const [items, setItems] = useState([]);
 
   const fetchItems = async () => {
-    const data = await fetch('http://localhost:3032/api/images', {
+    const data = await fetch('http://localhost:3032/api/images/1', {
       method: 'GET',
       mode: 'cors'
     });
@@ -25,7 +25,7 @@ function Carrusel() {
   return (
     <div className="carrusel">
       <Carousel>
-        {items.map(item => {
+        {items.sort((a,b) => a.sort - b.sort).map(item => {
           return <Carousel.Item key={item._id}>
             <img className="" 
                 style = {{ width: '50%', height: 'auto'}}

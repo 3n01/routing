@@ -78,27 +78,21 @@ nav {
 
 /*Nav*/
 
-/*.esFlag{
-    background-image: url("Spain-icon.png");
-    width: 10px;
-    height: 10px;
-}
 
+/*Bio*/
+ .bio{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+ }
 
-.esFlag {
-    display: inline-block;
-    background-size: 10px!important;
-    width: 10px;
-    height: 10px;
-    font-size: 0.1em;
-    padding: 5px;
-}
-
-.esFlag::before {
-    content: url(Spain-icon-35px.png);
-    padding: 5px;
-    background-size: 10px!important;
-    width: 10px;
-    height: 10px;
-    font-size: 0.1em;
-}*/
+ .descripcion{
+     width: 100%;
+     padding: 5px;
+     border: 1px solid lightgray;
+     word-wrap: break-word;
+     text-align: justify;
+     text-justify: inter-word;
+  }
