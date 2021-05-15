@@ -22,6 +22,13 @@ function Nav(){
         textDecoration: 'none'
     }
 
+    const dropDownStyle = {
+         color : 'gray',
+        fontWeight : 'bold',
+        fontSize: '14px',
+        textDecoration: 'none'
+    }
+
     return(
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
@@ -48,14 +55,14 @@ function Nav(){
               </li>
                <li class="nav-item">
                     <Dropdown>
-                      <Dropdown.Toggle variant="" id="dropdown-basic">
+                      <Dropdown.Toggle style={dropDownStyle} variant="" id="dropdown-basic">
                         {t("nav.idioma")}
                       </Dropdown.Toggle>
 
                       <Dropdown.Menu>
-                        <Dropdown.Item onClick={ () => i18n.changeLanguage("es")}>Español</Dropdown.Item>
-                        <Dropdown.Item onClick={ () => i18n.changeLanguage("en")}>English</Dropdown.Item>
-                        <Dropdown.Item onClick={ () => i18n.changeLanguage("fr")}>Français</Dropdown.Item>
+                        <Dropdown.Item style={dropDownStyle} onClick={ () => i18n.changeLanguage("es")}>ESPAÑOL</Dropdown.Item>
+                        <Dropdown.Item style={dropDownStyle} onClick={ () => i18n.changeLanguage("en")}>ENGLISH</Dropdown.Item>
+                        <Dropdown.Item style={dropDownStyle} onClick={ () => i18n.changeLanguage("fr")}>FRANÇAIS</Dropdown.Item>
                       </Dropdown.Menu>
                     </Dropdown>
 

@@ -27,8 +27,8 @@ function Carrusel() {
       <Carousel>
         {items.sort((a,b) => a.sort - b.sort).map(item => {
           return <Carousel.Item key={item._id}>
-            <img className="" 
-                style = {{ width: '50%', height: 'auto'}}
+            <img className="image-carousel" 
+               // style = {{ width: '50%', height: 'auto'}}
                 src={item.url} 
                 alt={item.name}>
             </img></Carousel.Item>

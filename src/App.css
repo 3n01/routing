@@ -76,6 +76,12 @@ nav {
     margin-top: 30px;
 }
 
+.image-carousel{
+  max-width: 100%;
+  height: auto;
+
+}
+
 /*Nav*/
 
 
@@ -91,7 +97,7 @@ nav {
  .descripcion{
      width: 100%;
      padding: 5px;
-     border: 1px solid lightgray;
+     /* border: 1px solid lightgray; */
      word-wrap: break-word;
      text-align: justify;
      text-justify: inter-word;
