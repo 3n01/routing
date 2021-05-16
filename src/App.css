@@ -12,15 +12,31 @@ nav {
   color:black;
 }
 
-.nav-links{
-  width: 95%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
-  font-family: monospace;
-  font-stretch: extra-expanded;
+@media (min-width: 901px){
+  .nav-links{
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-family: monospace;
+    font-stretch: extra-expanded;
+  }
+
 }
+
+@media (max-width: 900px){
+  .nav-links{
+    width: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    list-style: none;
+    font-family: monospace;
+    font-stretch: extra-expanded;
+  }
+}
+
 
 .carousel-control-next, .carousel-control-prev{
   /* -webkit-animation: bgcolorchange 10s infinite; /* Chrome, Safari, Opera */ 
