@@ -54,6 +54,17 @@ nav {
       100% {background: white;}
  }
 /*Pinturas/*/
+@media (max-width: 600px){
+  .pinturas{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+ }
+
+}
+@media (min-width: 601px){
  .pinturas{
     width: 80%;
     margin: auto;
@@ -61,10 +72,10 @@ nav {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
  }
+}
+ /* .image-card{
 
- .image-card{
-
- }
+ } */
 
  .image{
     width: 100%;
@@ -75,8 +86,6 @@ nav {
  }
 
 /*Carrusel*/
-
-
 
 @media (max-width: 900px){
   .image-carousel{
@@ -94,12 +103,25 @@ nav {
       margin: auto;
   }
 } 
-
+/*End Carrusel*/
 
 /*Nav*/
 
 
 /*Bio*/
+
+@media (max-width: 900px){
+  .bio{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+ }
+
+}
+
+@media (min-width: 901px){
  .bio{
     width: 80%;
     margin: auto;
@@ -107,12 +129,15 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
  }
+}
 
- .descripcion{
-     width: 100%;
-     padding: 5px;
-     /* border: 1px solid lightgray; */
-     word-wrap: break-word;
-     text-align: justify;
-     text-justify: inter-word;
-  }
+.descripcion{
+  width: 100%;
+  padding: 5px;
+  /* border: 1px solid lightgray; */
+  word-wrap: break-word;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/*END Bio*/
