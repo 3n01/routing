@@ -23,8 +23,9 @@ nav {
 }
 
 .carousel-control-next, .carousel-control-prev{
-  -webkit-animation: bgcolorchange 10s infinite; /* Chrome, Safari, Opera */ 
-  animation: 10s infinite bgcolorchange;
+  /* -webkit-animation: bgcolorchange 10s infinite; /* Chrome, Safari, Opera */ 
+  /* animation: 10s infinite bgcolorchange; */ 
+  color: transparent;
 }
 
 @keyframes bgcolorchange {
@@ -41,14 +42,16 @@ nav {
     background-color: white;
   }
   100% {
-    background-color: lightgray;
+    /* background-color: lightgray; */
+    background-color: white;
   }
 }
 /* Chrome, Safari, Opera */
  @-webkit-keyframes bgcolorchange {
       0%   {background: white;}
       80%  {background: white;}
-      100% {background: lightgray;}
+      /* 100% {background: lightgray;} */
+      100% {background: white;}
  }
 /*Pinturas/*/
  .pinturas{
@@ -72,15 +75,26 @@ nav {
  }
 
 /*Carrusel*/
-.carrusel{
-    margin-top: 30px;
-}
 
-.image-carousel{
-  max-width: 100%;
-  height: auto;
 
-}
+
+@media (max-width: 900px){
+  .image-carousel{
+    max-width: 100%;
+    height: auto;
+  
+  }
+} 
+
+@media (min-width: 901px){
+
+  .image-carousel {
+      max-width: 100%;
+      max-height: 80vh;
+      margin: auto;
+  }
+} 
+
 
 /*Nav*/
 
