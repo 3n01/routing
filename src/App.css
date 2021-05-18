@@ -157,3 +157,16 @@ nav {
 }
 
 /*END Bio*/
+
+/*Noticias*/
+.noticias-container{
+  margin: 40px;
+
+}
+
+.card{
+  margin-top: 40px;
+}
+
+
+/*End Noticias*/
