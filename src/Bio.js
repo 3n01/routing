@@ -1,7 +1,7 @@
 import './App.css';
 import React , { useState, useEffect }  from 'react';
 import { useTranslation} from 'react-i18next';
-
+import {LOCALHOST, PORT, TAB_BIO} from './constants';
 
 function Bio() {
 
@@ -13,7 +13,7 @@ function Bio() {
   const [item, setItem] = useState({});
 
   const fetchImage = async() => {
-    const data = await fetch('http://46.183.114.163:8080/api/images/4',{
+    const data = await fetch(`http://${LOCALHOST}:${PORT}/api/images/${TAB_BIO}`,{
       method : 'GET',
       mode : 'cors'
     });
@@ -25,8 +25,8 @@ function Bio() {
     <div className="bio">
        <div className="descripcion">
        <img className="image-carousel" 
-                src={item.url} 
-                alt={item.name}
+                src={item ? item.url : ''} 
+                alt={item ? item.name: ''}
                 >
             </img>
        </div>

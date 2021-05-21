@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import {SRLWrapper} from 'simple-react-lightbox';
+import {LOCALHOST, PORT, TAB_PINTURAS} from './constants';
 
 function Pinturas() {
     useEffect(() => {
@@ -10,7 +11,7 @@ function Pinturas() {
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-     const data = await fetch('http://46.183.114.163:8080/api/images/2', {
+     const data = await fetch(`http://${LOCALHOST}:${PORT}/api/images/${TAB_PINTURAS}`, {
       method: 'GET',
       mode: 'cors'
     });

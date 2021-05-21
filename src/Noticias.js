@@ -1,6 +1,6 @@
 import './App.css';
 import React , {useState, useEffect} from 'react';
-
+import {LOCALHOST, PORT} from './constants';
 function Noticias() {
 
   useEffect( () => {
@@ -10,7 +10,7 @@ function Noticias() {
   const [ items, setItems ] = useState([]);
 
   const fetchItems = async() => {
-    const data = await fetch('http://46.183.114.163:8080/api/news', {
+    const data = await fetch(`http://${LOCALHOST}:${PORT}/api/news`, {
       method: 'GET',
       mode: 'cors'
     });

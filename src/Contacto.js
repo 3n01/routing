@@ -2,6 +2,7 @@ import './App.css';
 import emailjs from 'emailjs-com';
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import {LOCALHOST, PORT, TAB_CONTACTO} from './constants';
 
 function Contacto() {
 
@@ -24,7 +25,7 @@ function Contacto() {
   }
 
   const fetchImage = async () => {
-    const data = await fetch('http://46.183.114.163:8080/api/images/2', {
+    const data = await fetch(`http://${LOCALHOST}:${PORT}/api/images/${TAB_CONTACTO}`, {
       method: 'GET',
       mode: 'cors'
     });
@@ -36,8 +37,8 @@ function Contacto() {
     <div className="contacto">
       <div className="contacto-box">
         <img className="image-contacto"
-          src={item.url}
-          alt={item.name}
+          src={item ? item.url : ''}
+          alt={item ? item.name : ''}
         >
         </img>
       </div>
