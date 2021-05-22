@@ -23,7 +23,7 @@ function Carrusel() {
   }
 
   return (
-    <div className="carrusel">
+    <div className="carrusel carousel-fade">
       <Carousel>
         {items.sort((a,b) => a.sort - b.sort).map(item => {
           return <Carousel.Item key={item._id}>
