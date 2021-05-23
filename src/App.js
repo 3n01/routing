@@ -6,6 +6,8 @@ import Pinturas from './Pinturas';
 import Carrusel from './Carrusel';
 import Noticias from './Noticias';
 import Contacto from './Contacto';
+import Legales from './Legales';
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
@@ -20,6 +22,7 @@ function App() {
             <Route path="/pinturas" component={Pinturas} />
             <Route path="/noticias" component={Noticias} />
             <Route path="/contacto" component={Contacto} />
+            <Route path="/legales" component={Legales} />
           </div>
         </Switch>
 

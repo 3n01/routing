@@ -22,7 +22,6 @@ nav {
     font-family: monospace;
     font-stretch: extra-expanded;
   }
-
 }
 
 @media (max-width: 900px){
@@ -78,7 +77,6 @@ nav {
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
  }
-
 }
 @media (min-width: 601px){
  .pinturas{
@@ -107,18 +105,27 @@ nav {
   .image-carousel{
     max-width: 100%;
     height: auto;
-  
   }
 } 
 
 @media (min-width: 901px){
-
   .image-carousel {
       max-width: 100%;
       max-height: 80vh;
       margin: auto;
   }
 } 
+
+
+.hover-gray:hover{
+   border-bottom: 3px gray solid;
+}
+
+.hover-gray::marker{
+  border-bottom: 3px gray solid;
+}
+
+
 /*End Carrusel*/
 
 /*Nav*/
@@ -161,7 +168,6 @@ nav {
 /*Noticias*/
 .noticias-container{
   margin: 40px;
-
 }
 
 .card{
@@ -171,8 +177,6 @@ nav {
 .card-header{
   text-align: left;
 }
-
-
 /*End Noticias*/
 
 /*Contacto*/
@@ -209,7 +213,35 @@ nav {
   }
   
 }
-
-
-
 /*End contacto*/
+
+/*Legales*/
+.legales-container{
+   font-size: 12px;
+   color: gray;
+   /* justify-content: space-around;
+   align-items: center;
+   list-style: none;
+   font-stretch: extra-expanded; */
+}
+
+.logales-header{
+  font-size: 12px;
+  color: gray;
+  /* justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  font-stretch: extra-expanded;
+  margin-top: 10px; */
+
+}
+
+.legales-texto{
+  margin:25px;
+  font-size: 12px;
+  color: gray;
+  word-wrap: break-word;
+  text-align: justify;
+  text-justify: inter-word;
+}
+/*End Legales*/
