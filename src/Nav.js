@@ -73,7 +73,6 @@ function Nav(){
                       <Dropdown.Menu>
                         <Dropdown.Item style={dropDownStyle} onClick={ () => i18n.changeLanguage("es")}>ESPAÑOL</Dropdown.Item>
                         <Dropdown.Item style={dropDownStyle} onClick={ () => i18n.changeLanguage("en")}>ENGLISH</Dropdown.Item>
-                        <Dropdown.Item style={dropDownStyle} onClick={ () => i18n.changeLanguage("fr")}>FRANÇAIS</Dropdown.Item>
                       </Dropdown.Menu>
                     </Dropdown>
 

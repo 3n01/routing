@@ -1,6 +1,8 @@
 import './App.css';
 import React , {useState, useEffect} from 'react';
 import {LOCALHOST, PORT} from './constants';
+import { useTranslation} from 'react-i18next';
+
 function Noticias() {
 
   useEffect( () => {
@@ -8,6 +10,7 @@ function Noticias() {
   }, []);
 
   const [ items, setItems ] = useState([]);
+  const [t, i18n] = useTranslation("global");
 
   const fetchItems = async() => {
     const data = await fetch(`http://${LOCALHOST}:${PORT}/api/news`, {
@@ -28,7 +31,7 @@ function Noticias() {
            <div class="card-body">
             <h5 class="card-title">{item.name}</h5>
             <p class="card-text">{item.description}</p>
-            <a href={item.link} class="btn btn-primary">Ir al evento</a>
+            <a href={item.link} class="btn btn-dark">{t("noticias.ir")}</a>
           </div>
         </div>
         )

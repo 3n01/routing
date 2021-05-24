@@ -46,19 +46,19 @@ function Contacto() {
 
         <form onSubmit={sendEmail} className="contacto-form">
           <div className="form-group">
-            <input type="text" className="form-control" name="user_name" placeholder="Nombre" />
+            <input type="text" className="form-control" name="user_name" placeholder={t("contacto.nombre")}/>
           </div>
           <div className="form-group">
 
-            <input type="text" className="form-control" name="user_email" placeholder="Correo" />
+            <input type="text" className="form-control" name="user_email" placeholder={t("contacto.correo")}/>
           </div>
           <div className="form-group">
-            <textarea className="form-control" name="user_message" placeholder="Mensaje" />
+            <textarea className="form-control" name="user_message" placeholder={t("contacto.mensaje")}/>
           </div>
 
 
           <div className="form-group contacto-submit">
-            <input type="submit" value="Send" />
+            <input type="submit" value={t("contacto.enviar")}/>
           </div>
 
         </form>
