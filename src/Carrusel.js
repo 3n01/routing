@@ -2,6 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
+import {LOCALHOST} from './constants'
 
 function Carrusel() {
 
@@ -12,9 +13,9 @@ function Carrusel() {
   const [items, setItems] = useState([]);
 
   const fetchItems = async () => {
-    const data = await fetch('http://localhost:3032/api/images/1', {
+    const data = await fetch(`${LOCALHOST}/api/images/1`, {
       method: 'GET',
-      mode: 'cors'
+  
     });
     const items = await data.json();
     console.log(items.result);

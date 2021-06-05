@@ -1,6 +1,7 @@
 import './App.css';
 import React , { useState, useEffect }  from 'react';
 import { useTranslation} from 'react-i18next';
+import {LOCALHOST} from './constants';
 
 
 function Bio() {
@@ -13,9 +14,8 @@ function Bio() {
   const [item, setItem] = useState({});
 
   const fetchImage = async() => {
-    const data = await fetch('http://localhost:3032/api/images/4',{
-      method : 'GET',
-      mode : 'cors'
+    const data = await fetch(`${LOCALHOST}/api/images/4`,{
+      method : 'GET'
     });
     const item = await data.json();
     setItem(item.result[0]);

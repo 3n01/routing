@@ -168,5 +168,48 @@ nav {
   margin-top: 40px;
 }
 
+.card-header{
+  text-align: left;
+}
+
 
 /*End Noticias*/
+
+/*Contacto*/
+.contacto{
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+
+.contacto-form{
+  margin:10px;
+}
+
+.contacto-submit{
+  align-self: start;
+  display: flex;
+}
+
+
+@media (min-width: 501px){
+  .image-contacto{
+    width: 50%;
+    height: auto;
+  
+  }
+}
+
+
+@media (max-width: 500px){
+  .image-contacto{
+    display : none;
+  }
+  
+}
+
+
+
+/*End contacto*/

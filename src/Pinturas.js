@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import {SRLWrapper} from 'simple-react-lightbox';
+import {LOCALHOST} from './constants';
 
 function Pinturas() {
     useEffect(() => {
@@ -10,9 +11,8 @@ function Pinturas() {
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-     const data = await fetch('http://localhost:3032/api/images/2', {
+     const data = await fetch(`${LOCALHOST}/api/images/2`, {
       method: 'GET',
-      mode: 'cors'
     });
     const items = await data.json();
     console.log(items.result);

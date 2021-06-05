@@ -1,5 +1,6 @@
 import './App.css';
 import React , {useState, useEffect} from 'react';
+import {LOCALHOST} from './constants';
 
 function Noticias() {
 
@@ -10,9 +11,9 @@ function Noticias() {
   const [ items, setItems ] = useState([]);
 
   const fetchItems = async() => {
-    const data = await fetch('http://localhost:3032/api/news', {
+    const data = await fetch(`${LOCALHOST}/api/news`, {
       method: 'GET',
-      mode: 'cors'
+
     });
     const items = await data.json();
     console.log(items.result);

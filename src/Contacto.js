@@ -1,48 +1,68 @@
 import './App.css';
 import emailjs from 'emailjs-com';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import {LOCALHOST} from './constants';
 
 function Contacto() {
+
+  useEffect(() => {
+    fetchImage();
+  }, [])
+
+  const [t, i18n] = useTranslation("global");
+  const [item, setItem] = useState({});
 
   function sendEmail(e) {
     e.preventDefault();
     emailjs.sendForm('service_2kkxkj1', 'template_51eqblc', e.target, 'user_AxO7ORYJihsgfH2jT5H07')
       .then(
-        result => console.log(result.text),
-        err => console.log(err.text)
+        result => alert("El correo ha sido enviado con éxito"),
+        err => alert("Ha sido imposible enviar el correo. Por favor inténtelo mas tarde")
       );
 
     e.target.reset();
   }
 
+  const fetchImage = async () => {
+    const data = await fetch(`${LOCALHOST}/api/images/2`, {
+      method: 'GET',
+    });
+    const item = await data.json();
+    setItem(item.result[0]);
+  }
+
   return (
-    <div className="Contacto">
-      {/* <form className="contacto-form" onSubmit={sendEmail}>
-          <input type="text" name="user_name" placeholder="Nombre"/>
-          <input type="text" name="user_email" placeholder="Email"/>
-          <input type="text" name="user_message" placeholder="Mensaje"/>
-          <input type="submit" value="Send"/>
-        </form> */}
-      <form onSubmit={sendEmail}> 
-        <div className="form-row">
-          <div className="col-6">
+    <div className="contacto">
+      <div className="contacto-box">
+        <img className="image-contacto"
+          src={item.url}
+          alt={item.name}
+        >
+        </img>
+      </div>
+      <div className="contacto-box">
+
+        <form onSubmit={sendEmail} className="contacto-form">
+          <div className="form-group">
             <input type="text" className="form-control" name="user_name" placeholder="Nombre" />
           </div>
-          <div className="col-6">
+          <div className="form-group">
+
             <input type="text" className="form-control" name="user_email" placeholder="Correo" />
           </div>
-        </div>
-        <div className="form-row">
-          <div className="col-12">
-            <input type="text" className="form-control" name="user_message" placeholder="Mensaje" />
+          <div className="form-group">
+            <textarea className="form-control" name="user_message" placeholder="Mensaje" />
           </div>
-        </div>
-        <div className="form-row">
-        <div className="col-2">
-          <input type="submit" value="Send" />
+
+
+          <div className="form-group contacto-submit">
+            <input type="submit" value="Send" />
           </div>
-        </div>
-      </form>
+
+        </form>
+      </div>
+
     </div>
   );
 }
