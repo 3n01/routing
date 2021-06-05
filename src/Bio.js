@@ -28,9 +28,8 @@ function Bio() {
   }
 
   const fetchImage = async() => {
-    const data = await fetch(`http://${LOCALHOST}:${PORT}/api/images/${TAB_BIO}`,{
-      method : 'GET',
-      mode : 'cors'
+    const data = await fetch(`${LOCALHOST}/api/images/${TAB_BIO}`,{
+      method : 'GET'
     });
     const item = await data.json();
     setItem(item.result[0]);
