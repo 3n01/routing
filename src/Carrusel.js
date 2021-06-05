@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Carousel } from 'react-bootstrap';
-import {LOCALHOST, PORT, TAB_CARRUSEL} from './constants';
+import {LOCALHOST, TAB_CARRUSEL} from './constants';
 function Carrusel() {
 
   useEffect(() => {
@@ -12,9 +12,8 @@ function Carrusel() {
   const [items, setItems] = useState([]);
 
   const fetchItems = () => {
-    fetch(`http://${LOCALHOST}:${PORT}/api/images/${TAB_CARRUSEL}`, {
-      method: 'GET',
-      mode: 'cors'
+    fetch(`${LOCALHOST}/api/images/${TAB_CARRUSEL}`, {
+      method: 'GET'
     }).then( data => data.json())
     .then(
 	items => setItems(items.result),

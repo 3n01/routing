@@ -1,6 +1,6 @@
 import './App.css';
 import React , {useState, useEffect} from 'react';
-import {LOCALHOST, PORT} from './constants';
+import {LOCALHOST} from './constants';
 import { useTranslation} from 'react-i18next';
 
 function Noticias() {
@@ -13,9 +13,8 @@ function Noticias() {
   const [t, i18n] = useTranslation("global");
 
   const fetchItems = async() => {
-    const data = await fetch(`http://${LOCALHOST}:${PORT}/api/news`, {
-      method: 'GET',
-      mode: 'cors'
+    const data = await fetch(`${LOCALHOST}/api/news`, {
+      method: 'GET'
     });
     const items = await data.json();
     console.log(items.result);
