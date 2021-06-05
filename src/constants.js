@@ -1,1 +1,1 @@
-export const LOCALHOST = 'https://nodeservergestion.xyz/';
+export const LOCALHOST = 'https://nodeservergestion.xyz';
