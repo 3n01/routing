@@ -16,9 +16,8 @@ function Bio() {
   const [desc, setDesc] = useState('');
 
   const fetchBioDesc= async() => {
-    const data = await fetch(`http://${LOCALHOST}:${PORT}/api/bio`,{
-      method : 'GET',
-      mode : 'cors'
+    const data = await fetch(`${LOCALHOST}/api/bio`,{
+      method : 'GET'
     });
     const desc = await data.json();
     const es = desc[0].espanol;
