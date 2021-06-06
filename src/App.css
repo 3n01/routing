@@ -4,7 +4,7 @@
 
 
 nav {
-  margin-top: -15px;
+  margin-top: -10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -230,8 +230,6 @@ nav {
   text-align: start;
   
 }
-
-
 
 .contact-card-media > a:link{
   text-decoration: none!important;
