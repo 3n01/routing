@@ -2,7 +2,7 @@ import './App.css';
 import emailjs from 'emailjs-com';
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import {LOCALHOST, TAB_CONTACTO} from './constants';
+import { LOCALHOST, TAB_CONTACTO } from './constants';
 
 function Contacto() {
 
@@ -41,23 +41,49 @@ function Contacto() {
         >
         </img>
       </div>
-      <div className="contacto-box">
+      <div className="contacto-box-form">
 
+
+        <div className="contact-card">
+          <div className="contact-card-title">
+            CONTACT INFO
+            </div>
+
+
+          <div className="contact-card-media-images">
+            <div className="contact-card-media" data-toggle="tooltip" title="efrengari@gmail.com ">
+              <i className="fas fa-envelope"></i> <span className="contact-card-email">E-mail</span>
+            </div>
+            <div className="contact-card-media" data-toggle="tooltip" title="Ir a instagram">
+              <a href="https://www.instagram.com/pintor_efren/"><i className="fab fa-instagram"></i><span style={{ marginLeft: '18px' }} className="contact-card-email">Instagram</span></a>
+            </div>
+            <div className="contact-card-media" data-toggle="tooltip" title="Ir a facebook">
+              <a href="https://www.instagram.com/pintor_efren/"><i className="fab fa-facebook-square"></i><span style={{ marginLeft: '18px' }} className="contact-card-email">Facebook</span></a>
+            </div>
+            <div className="contact-card-media" data-toggle="tooltip" title="Ir a gmail">
+              <a href="https://www.instagram.com/pintor_efren/"><i className="fab fa-youtube"></i><span style={{ marginLeft: '12px' }} className="contact-card-email">Youtube</span></a>
+            </div>
+
+
+
+          </div>
+
+        </div>
         <form onSubmit={sendEmail} className="contacto-form">
           <div className="form-group">
-            <input type="text" className="form-control" name="user_name" placeholder={t("contacto.nombre")}/>
+            <input type="text" className="form-control" name="user_name" placeholder={t("contacto.nombre")} />
           </div>
           <div className="form-group">
 
-            <input type="text" className="form-control" name="user_email" placeholder={t("contacto.correo")}/>
+            <input type="text" className="form-control" name="user_email" placeholder={t("contacto.correo")} />
           </div>
           <div className="form-group">
-            <textarea className="form-control" name="user_message" placeholder={t("contacto.mensaje")}/>
+            <textarea className="form-control" name="user_message" placeholder={t("contacto.mensaje")} />
           </div>
 
 
           <div className="form-group contacto-submit">
-            <input type="submit" value={t("contacto.enviar")}/>
+            <input className="btn-dark" type="submit" value={t("contacto.enviar")} />
           </div>
 
         </form>

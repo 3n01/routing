@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+
 nav {
   margin-top: -15px;
   display: flex;
@@ -11,6 +12,7 @@ nav {
   background-color: white!important;
   color:black;
 }
+
 
 @media (min-width: 901px){
   .nav-links{
@@ -185,8 +187,63 @@ nav {
   gap: 10px;
 }
 
+.contacto-box-form{
+  width: 100%;
+  margin: auto;
+  display: grid;
+  gap: 10px;
+}
+
+.contact-card{
+  margin: 10px;
+  /* border: 1px solid gainsboro;  */
+  padding: 10px;
+}
+
+.contact-card-title{
+  text-align: start;
+  font-size: 14px;
+  color: gray;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.contact-card-email{
+  margin-left: 10px;
+  color: orange;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: start;
+
+}
+
+/* .contact-card-media-images{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 23px;
+} */
+
+.contact-card-media {
+  margin-top: 5px;
+  font-size: 20px;
+  text-align: start;
+  
+}
+
+
+
+.contact-card-media > a:link{
+  text-decoration: none!important;
+} 
+
+.contact-card-media > a:visited {
+  text-decoration: none!important;
+} 
+
 .contacto-form{
   margin:10px;
+
 }
 
 .contacto-submit{
@@ -194,19 +251,30 @@ nav {
   display: flex;
 }
 
+.btn-dark{
+  border-radius: 7%;
+}
 
-@media (min-width: 501px){
+
+@media (min-width: 721px){
   .image-contacto{
-    width: 50%;
+    width: 100%;
     height: auto;
   
+  }
+  .contacto-box-form{
+    grid-template-columns:  7fr 20fr;
   }
 }
 
 
-@media (max-width: 500px){
+@media (max-width: 720px){
   .image-contacto{
     display : none;
+  }
+
+  .contacto-box-form{
+    grid-template-columns: repeat(1, 1fr);
   }
   
 }
