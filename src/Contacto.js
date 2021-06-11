@@ -58,10 +58,10 @@ function Contacto() {
               <a href="https://www.instagram.com/pintor_efren/"><i className="fab fa-instagram"></i><span style={{ marginLeft: '18px' }} className="contact-card-email">Instagram</span></a>
             </div>
             <div className="contact-card-media" data-toggle="tooltip" title="Ir a facebook">
-              <a href="https://www.instagram.com/pintor_efren/"><i className="fab fa-facebook-square"></i><span style={{ marginLeft: '18px' }} className="contact-card-email">Facebook</span></a>
+              <a href="https://www.facebook.com/efrengarciaiglesias.pintor"><i className="fab fa-facebook-square"></i><span style={{ marginLeft: '18px' }} className="contact-card-email">Facebook</span></a>
             </div>
             <div className="contact-card-media" data-toggle="tooltip" title="Ir a gmail">
-              <a href="https://www.instagram.com/pintor_efren/"><i className="fab fa-youtube"></i><span style={{ marginLeft: '12px' }} className="contact-card-email">Youtube</span></a>
+              <a href="https://www.youtube.com/channel/UCYQDZSSqtaSYg1OmoRhfHXA"><i className="fab fa-youtube"></i><span style={{ marginLeft: '12px' }} className="contact-card-email">Youtube</span></a>
             </div>
 
 
